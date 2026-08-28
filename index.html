@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nashik Kulfi - Professional POS & Billing Suite</title>
+<title>Nashik Kulfi - Professional POS Suite</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 <style>
@@ -31,7 +31,7 @@ body {
     min-height: 100vh;
 }
 
-/* ================= LOGIN & BIOMETRIC MODAL / SCREEN ================= */
+/* ================= LOGIN SCREEN ================= */
 #loginScreen {
     min-height: 100vh;
     display: flex;
@@ -43,17 +43,17 @@ body {
 
 .login-box {
     width: 100%;
-    max-width: 420px;
+    max-width: 400px;
     background: white;
-    padding: 35px 25px;
-    border-radius: 24px;
-    box-shadow: 0 25px 70px rgba(0,0,0,0.4);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     text-align: center;
 }
 
 .login-logo {
-    width: 85px;
-    height: 85px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     margin: auto;
     background: var(--cream);
@@ -65,24 +65,24 @@ body {
     color: var(--purple);
 }
 
-.login-logo b { font-size: 26px; }
-.login-logo small { color: var(--pink); font-weight: bold; font-size: 10px; }
+.login-logo b { font-size: 24px; }
+.login-logo small { color: var(--pink); font-weight: bold; font-size: 9px; }
 
 .login-title {
     font-family: Georgia, serif;
     color: var(--purple);
-    font-size: 24px;
-    margin-top: 12px;
+    font-size: 22px;
+    margin-top: 14px;
 }
 
 .login-subtitle {
     font-size: 11px;
     color: #666;
-    margin: 4px 0 20px;
+    margin: 4px 0 24px;
 }
 
 .field {
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     text-align: left;
 }
 
@@ -91,7 +91,7 @@ body {
     font-size: 11px;
     font-weight: 700;
     color: #706875;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 input, select {
@@ -119,50 +119,18 @@ input:focus, select:focus {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 6px;
-    font-size: 14px;
-}
-
-.fingerprint-btn {
-    width: 100%;
-    height: 48px;
-    border: 2px solid var(--purple);
-    border-radius: 10px;
-    background: #faf6fc;
-    color: var(--purple);
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-size: 13px;
-    display: none;
-}
-
-.register-fp-btn {
-    width: 100%;
-    height: 42px;
-    border: 1px dashed var(--green);
-    border-radius: 10px;
-    background: #f0fdf4;
-    color: var(--green);
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
     margin-top: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
+    font-size: 14px;
+    transition: 0.2s;
 }
+
+.login-btn:hover { background: var(--dark); }
 
 #error {
     min-height: 20px;
     color: var(--red);
     font-size: 12px;
-    margin-top: 8px;
+    margin-top: 10px;
     font-weight: 600;
 }
 
@@ -175,8 +143,8 @@ input:focus, select:focus {
     z-index: 20;
     background: linear-gradient(135deg, var(--dark), var(--purple));
     color: white;
-    padding: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    padding: 12px 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .header-inner {
@@ -185,35 +153,34 @@ input:focus, select:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
 }
 
-.brand { display: flex; align-items: center; gap: 10px; }
+.brand { display: flex; align-items: center; gap: 12px; }
 
 .small-logo {
-    width: 46px;
-    height: 46px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: var(--cream);
     color: var(--purple);
     display: flex;
     align-items: center;
     justify-content: center;
-    font: bold 16px Georgia;
+    font: bold 15px Georgia;
     border: 2px solid white;
 }
 
-.brand-title { font: bold 18px Georgia; letter-spacing: 0.5px; }
+.brand-title { font: bold 17px Georgia; letter-spacing: 0.5px; }
 .brand-subtitle { font-size: 9px; color: #eadff0; margin-top: 2px; }
 
-.header-buttons { display: flex; gap: 5px; }
+.header-buttons { display: flex; gap: 6px; }
 .header-buttons button {
     border: 1px solid rgba(255,255,255,0.3);
     background: rgba(255,255,255,0.1);
     color: white;
-    padding: 7px 10px;
-    border-radius: 7px;
-    font-size: 9px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 10px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -221,26 +188,28 @@ input:focus, select:focus {
 .main {
     max-width: 720px;
     margin: auto;
-    padding: 14px 12px 50px;
+    padding: 16px 12px 50px;
 }
 
 .card {
     background: white;
     border: 1px solid #e6dfe8;
-    border-radius: 16px;
+    border-radius: 14px;
     padding: 16px;
     margin-bottom: 12px;
-    box-shadow: 0 4px 15px rgba(45,11,66,0.04);
+    box-shadow: 0 4px 12px rgba(45,11,66,0.03);
 }
 
 .card-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 800;
     color: var(--purple);
     margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .grid {
@@ -251,10 +220,10 @@ input:focus, select:focus {
 
 .full { grid-column: 1 / -1; }
 
-/* ================= ITEMS ================= */
+/* ================= ITEMS TABLE ================= */
 .items-head, .item-row {
     display: grid;
-    grid-template-columns: 32px 1fr 65px 85px 42px;
+    grid-template-columns: 32px 1fr 70px 90px 40px;
     gap: 6px;
     align-items: center;
 }
@@ -264,13 +233,13 @@ input:focus, select:focus {
     color: white;
     padding: 8px 6px;
     border-radius: 8px 8px 0 0;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: bold;
     text-align: center;
 }
 
 .item-row {
-    padding: 6px 6px;
+    padding: 6px;
     border: 1px solid #eee8f0;
     border-top: 0;
 }
@@ -291,16 +260,15 @@ input:focus, select:focus {
     background: #fff0f2;
     color: var(--red);
     font-size: 11px;
-    font-weight: bold;
     cursor: pointer;
 }
 
 .add-btn {
     width: 100%;
-    height: 42px;
+    height: 40px;
     margin-top: 8px;
     border: 1px dashed var(--purple);
-    border-radius: 9px;
+    border-radius: 8px;
     background: #faf6fc;
     color: var(--purple);
     font-weight: bold;
@@ -308,7 +276,7 @@ input:focus, select:focus {
     font-size: 12px;
 }
 
-/* ================= BILLING SUMMARY ================= */
+/* ================= SUMMARY ================= */
 .summary {
     background: #faf8fb;
     border: 1px solid #e5dce9;
@@ -319,8 +287,9 @@ input:focus, select:focus {
 .summary-row {
     display: flex;
     justify-content: space-between;
-    padding: 5px 0;
+    padding: 4px 0;
     font-size: 13px;
+    color: #555;
 }
 
 .total-row {
@@ -328,23 +297,23 @@ input:focus, select:focus {
     justify-content: space-between;
     border-top: 2px solid var(--purple);
     margin-top: 6px;
-    padding-top: 10px;
+    padding-top: 8px;
     color: var(--purple);
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 900;
 }
 
 /* ================= ACTIONS ================= */
 .actions {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
 }
 
 .action-btn {
-    min-height: 48px;
+    min-height: 46px;
     border: 0;
-    border-radius: 9px;
+    border-radius: 8px;
     font-size: 11px;
     font-weight: bold;
     cursor: pointer;
@@ -352,7 +321,6 @@ input:focus, select:focus {
     align-items: center;
     justify-content: center;
     gap: 4px;
-    text-align: center;
     padding: 4px;
 }
 
@@ -364,7 +332,7 @@ input:focus, select:focus {
 .clear { background: #fff0f2; color: var(--red); }
 
 /* ================= SAVED INVOICES ================= */
-.search-box { display: flex; gap: 7px; }
+.search-box { display: flex; gap: 6px; }
 .saved-list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
 .saved-item {
     border: 1px solid #e4dce7;
@@ -372,93 +340,47 @@ input:focus, select:focus {
     padding: 10px 12px;
     display: flex;
     justify-content: space-between;
-    gap: 8px;
-    background: #fcfbfd;
     align-items: center;
+    background: #fcfbfd;
 }
 .saved-info strong { color: var(--purple); font-size: 13px; }
 .saved-info small { display: block; color: #666; font-size: 10px; margin-top: 2px; }
-.saved-buttons { display: flex; gap: 5px; align-items: center; }
-.small-btn { border: 0; border-radius: 6px; padding: 7px 10px; font-size: 10px; font-weight: bold; cursor: pointer; }
+.saved-buttons { display: flex; gap: 5px; }
+.small-btn { border: 0; border-radius: 6px; padding: 6px 10px; font-size: 10px; font-weight: bold; cursor: pointer; }
 .open-btn { background: #eee8f3; color: var(--purple); }
 .delete-btn { background: #fff0f2; color: var(--red); }
 .empty { text-align: center; color: #888; font-size: 12px; padding: 15px; }
 
-footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
+footer { text-align: center; color: #766d79; font-size: 10px; padding: 12px; line-height: 1.6; }
 
-/* ================= MODALS ================= */
+/* ================= MODAL ================= */
 .modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    z-index: 100;
+    position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+    display: none; align-items: center; justify-content: center; padding: 20px; z-index: 100;
 }
-
 .modal-box {
-    background: white;
-    border-radius: 18px;
-    padding: 22px;
-    width: 100%;
-    max-width: 400px;
+    background: white; border-radius: 16px; padding: 22px; width: 100%; max-width: 380px;
 }
-
-.modal-box h2 {
-    color: var(--purple);
-    font-size: 18px;
-    margin-bottom: 14px;
-}
-
-.modal-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.modal-buttons button {
-    height: 42px;
-    border: 0;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
+.modal-box h2 { color: var(--purple); font-size: 17px; margin-bottom: 14px; }
+.modal-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+.modal-buttons button { height: 40px; border: 0; border-radius: 8px; font-weight: bold; cursor: pointer; }
 .modal-save { background: var(--purple); color: white; }
 .modal-cancel { background: #eee; color: #333; }
 
 /* ================= TOAST ================= */
 #toast {
-    position: fixed;
-    bottom: 25px;
-    left: 50%;
-    transform: translate(-50%, 100px);
-    background: var(--dark);
-    color: white;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: 600;
-    opacity: 0;
-    transition: 0.3s;
-    z-index: 200;
-    white-space: nowrap;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: fixed; bottom: 25px; left: 50%; transform: translate(-50%, 100px);
+    background: var(--dark); color: white; padding: 10px 18px; border-radius: 8px;
+    font-size: 12px; font-weight: 600; opacity: 0; transition: 0.3s; z-index: 200;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
-
-#toast.show {
-    transform: translate(-50%, 0);
-    opacity: 1;
-}
+#toast.show { transform: translate(-50%, 0); opacity: 1; }
 
 @media(max-width: 480px) {
     .grid { grid-template-columns: 1fr; }
     .full { grid-column: auto; }
     .actions { grid-template-columns: 1fr 1fr; }
-    .items-head, .item-row { grid-template-columns: 26px 1fr 55px 75px 36px; }
+    .items-head, .item-row { grid-template-columns: 24px 1fr 55px 75px 36px; }
 }
 </style>
 </head>
@@ -473,10 +395,10 @@ footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
             <small>KULFI</small>
         </div>
         <div class="login-title">NASHIK KULFI</div>
-        <div class="login-subtitle">Professional POS & Biometric Suite</div>
+        <div class="login-subtitle">Professional Billing & POS Portal</div>
 
         <div class="field">
-            <label>LOGIN ID</label>
+            <label>ADMIN ID</label>
             <input id="loginId" type="text" value="Sahil@786" placeholder="Enter ID">
         </div>
 
@@ -488,10 +410,7 @@ footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
             </div>
         </div>
 
-        <button class="login-btn" onclick="login()">🔐 SECURE LOGIN</button>
-        <button id="fpLoginBtn" class="fingerprint-btn" onclick="fingerprintLogin()">👆 LOGIN WITH FINGERPRINT</button>
-        <button class="register-fp-btn" onclick="registerFingerprint()">➕ REGISTER FINGERPRINT SCAN</button>
-
+        <button class="login-btn" onclick="login()">SECURE LOGIN</button>
         <div id="error"></div>
     </div>
 </div>
@@ -504,12 +423,12 @@ footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
             <div class="small-logo">NK</div>
             <div>
                 <div class="brand-title">NASHIK KULFI</div>
-                <div class="brand-subtitle">Cloud Synchronized POS</div>
+                <div class="brand-subtitle">Enterprise POS System</div>
             </div>
         </div>
         <div class="header-buttons">
-            <button onclick="openPassword()">🔑 PASSWORD</button>
-            <button onclick="logout()">🚪 LOGOUT</button>
+            <button onclick="openPassword()">PASSWORD</button>
+            <button onclick="logout()">LOGOUT</button>
         </div>
     </div>
 </header>
@@ -517,10 +436,10 @@ footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
 <main class="main">
 
 <section class="card">
-    <div class="card-title">🧾 Invoice Details</div>
+    <div class="card-title">Invoice Information</div>
     <div class="grid">
         <div class="field">
-            <label>INVOICE NUMBER</label>
+            <label>INVOICE NO.</label>
             <input id="invoiceNo">
         </div>
         <div class="field">
@@ -539,14 +458,14 @@ footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
 </section>
 
 <section class="card">
-    <div class="card-title">👤 Customer Details</div>
+    <div class="card-title">Customer Details</div>
     <div class="grid">
         <div class="field full">
             <label>CUSTOMER NAME</label>
             <input id="customerName" placeholder="Enter customer name">
         </div>
         <div class="field full">
-            <label>ADDRESS</label>
+            <label>ADDRESS / LOCATION</label>
             <input id="customerAddress" placeholder="Enter customer address">
         </div>
         <div class="field full">
@@ -557,7 +476,7 @@ footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
 </section>
 
 <section class="card">
-    <div class="card-title">🍨 Kulfi Items & Direct Inventory</div>
+    <div class="card-title">Kulfi Inventory & Items</div>
     <div class="items-head">
         <span>No.</span>
         <span>Item / Flavor Name</span>
@@ -566,13 +485,13 @@ footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
         <span>Action</span>
     </div>
     <div id="items"></div>
-    <button class="add-btn" onclick="addItem()">＋ ADD KULFI ITEM</button>
+    <button class="add-btn" onclick="addItem()">＋ ADD NEW ITEM</button>
 </section>
 
 <section class="card">
-    <div class="card-title">💰 Billing Summary & Discounts</div>
+    <div class="card-title">Billing Summary</div>
     <div class="field">
-        <label>DISCOUNT ₹</label>
+        <label>DISCOUNT AMOUNT (₹)</label>
         <input id="discount" type="number" min="0" value="0">
     </div>
     <br>
@@ -586,7 +505,7 @@ footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
             <b id="discountShow">₹0.00</b>
         </div>
         <div class="total-row">
-            <span>TOTAL</span>
+            <span>TOTAL PAYABLE</span>
             <span id="total">₹0.00</span>
         </div>
     </div>
@@ -594,31 +513,34 @@ footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
 
 <section class="card">
     <div class="actions">
-        <button class="action-btn download" onclick="downloadInvoiceImage()">🖼️ DOWNLOAD IMAGE</button>
-        <button class="action-btn print" onclick="printInvoiceDocument()">🖨️ PRINT BILL</button>
-        <button class="action-btn whatsapp" onclick="sendWhatsApp()">💬 WHATSAPP BILL</button>
-        <button class="action-btn save" onclick="saveInvoice()">💾 SAVE TO CLOUD</button>
-        <button class="action-btn new" onclick="newInvoice()">✨ NEW BILL</button>
-        <button class="action-btn clear" onclick="clearForm()">🗑️ CLEAR</button>
+        <button class="action-btn download" onclick="downloadInvoiceImage()">DOWNLOAD IMG</button>
+        <button class="action-btn print" onclick="printInvoiceDocument()">PRINT BILL</button>
+        <button class="action-btn whatsapp" onclick="sendWhatsApp()">WHATSAPP BILL</button>
+        <button class="action-btn save" onclick="saveInvoice()">SAVE CLOUD</button>
+        <button class="action-btn new" onclick="newInvoice()">NEW BILL</button>
+        <button class="action-btn clear" onclick="clearForm()">CLEAR</button>
     </div>
 </section>
 
 <section class="card">
-    <div class="card-title">📚 Saved Invoices & Cloud Database</div>
+    <div class="card-title">Saved Invoices Ledger</div>
     <div class="search-box">
-        <input id="search" placeholder="Search invoice or customer name..." oninput="renderSaved()">
+        <input id="search" placeholder="Search by invoice no or customer name..." oninput="renderSaved()">
     </div>
     <div id="saved" class="saved-list"></div>
 </section>
 
-<footer>Nashik Kulfi • Premium Taste • Pure Ingredients • Karanja Lad</footer>
+<footer>
+    Nashik Kulfi • Premium Quality • Pure Ingredients • Karanja Lad<br>
+    <strong>Created by Huzefa Khetiwale</strong>
+</footer>
 </main>
 </div>
 
 <!-- ================= PASSWORD MODAL ================= -->
 <div id="passwordModal" class="modal">
     <div class="modal-box">
-        <h2>🔐 Change Password</h2>
+        <h2>Change Password</h2>
         <div class="field">
             <label>CURRENT PASSWORD</label>
             <input id="oldPass" type="password">
@@ -637,8 +559,8 @@ footer { text-align: center; color: #766d79; font-size: 10px; padding: 10px; }
 <div id="toast"></div>
 
 <script>
-const DEFAULT_ID = "sahil@786";
-const DEFAULT_PASSWORD = "sohel@786";
+const DEFAULT_ID = "Sahil@786";
+const DEFAULT_PASSWORD = "Sohel@786";
 
 const KULFI_PRESETS = [
     "Dry Fruits Kulfi",
@@ -655,13 +577,8 @@ const KULFI_PRESETS = [
 let items = [];
 let invoiceNumber = Number(localStorage.getItem("nk_invoice_number")) || 1001;
 
-function getLoginId(){
-    return localStorage.getItem("nk_login_id") || DEFAULT_ID;
-}
-
-function getPassword(){
-    return localStorage.getItem("nk_password") || DEFAULT_PASSWORD;
-}
+function getLoginId(){ return localStorage.getItem("nk_login_id") || DEFAULT_ID; }
+function getPassword(){ return localStorage.getItem("nk_password") || DEFAULT_PASSWORD; }
 
 function togglePass(){
     const pass = document.getElementById("loginPass");
@@ -669,7 +586,6 @@ function togglePass(){
 }
 
 window.addEventListener("load", function(){
-    checkFingerprintRegistered();
     if(sessionStorage.getItem("nk_logged_in") === "true"){
         document.getElementById("loginScreen").style.display = "none";
         document.getElementById("app").style.display = "block";
@@ -677,125 +593,19 @@ window.addEventListener("load", function(){
     }
 });
 
-function checkFingerprintRegistered(){
-    const currentId = document.getElementById("loginId").value.trim().toLowerCase();
-    const fpKey = "nk_fingerprint_" + currentId;
-    if(localStorage.getItem(fpKey)){
-        document.getElementById("fpLoginBtn").style.display = "flex";
-    } else {
-        document.getElementById("fpLoginBtn").style.display = "none";
-    }
-}
-
-document.getElementById("loginId").addEventListener("input", checkFingerprintRegistered);
-
 function login(){
-    const id = document.getElementById("loginId").value.trim().toLowerCase();
+    const id = document.getElementById("loginId").value.trim();
     const pass = document.getElementById("loginPass").value.trim();
 
-    if(id === getLoginId().toLowerCase() && pass === getPassword()){
+    if(id === getLoginId() && pass === getPassword()){
         sessionStorage.setItem("nk_logged_in", "true");
         document.getElementById("loginScreen").style.display = "none";
         document.getElementById("app").style.display = "block";
         startApp();
-        toast("✓ Secure Login Successful");
+        toast("Login Successful");
     } else {
-        document.getElementById("error").textContent = "❌ Invalid Login ID or Password";
+        document.getElementById("error").textContent = "Invalid Admin ID or Password";
     }
-}
-
-async function registerFingerprint(){
-    const id = document.getElementById("loginId").value.trim().toLowerCase();
-    const pass = document.getElementById("loginPass").value.trim();
-
-    if(id !== getLoginId().toLowerCase() || pass !== getPassword()){
-        toast("⚠️ Enter correct ID & Password first to verify owner!");
-        document.getElementById("error").textContent = "❌ Verify credentials to lock fingerprint";
-        return;
-    }
-
-    if (window.PublicKeyCredential && window.isSecureContext) {
-        try {
-            toast("👆 Please touch your biometric fingerprint sensor...");
-            const challenge = new Uint8Array(32);
-            window.crypto.getRandomValues(challenge);
-            
-            const credential = await navigator.credentials.create({
-                publicKey: {
-                    challenge: challenge,
-                    rp: { name: "Nashik Kulfi POS" },
-                    user: {
-                        id: Uint8Array.from(id, c => c.charCodeAt(0)),
-                        name: id,
-                        displayName: id
-                    },
-                    pubKeyAlg: [{type: "public-key", alg: -7}, {type: "public-key", alg: -257}],
-                    authenticatorSelection: { authenticatorAttachment: "platform", userVerification: "required" },
-                    timeout: 60000
-                }
-            });
-
-            if(credential){
-                localStorage.setItem("nk_fingerprint_" + id, "registered");
-                document.getElementById("fpLoginBtn").style.display = "flex";
-                toast("✓ Fingerprint Registered Securely!");
-                document.getElementById("error").textContent = "";
-            }
-        } catch (e) {
-            localStorage.setItem("nk_fingerprint_" + id, "simulated_secure");
-            document.getElementById("fpLoginBtn").style.display = "flex";
-            toast("✓ Biometric Device Bound Successfully!");
-            document.getElementById("error").textContent = "";
-        }
-    } else {
-        localStorage.setItem("nk_fingerprint_" + id, "simulated_secure");
-        document.getElementById("fpLoginBtn").style.display = "flex";
-        toast("✓ Biometric Fingerprint Added Successfully!");
-        document.getElementById("error").textContent = "";
-    }
-}
-
-async function fingerprintLogin(){
-    const id = document.getElementById("loginId").value.trim().toLowerCase();
-    const fpKey = "nk_fingerprint_" + id;
-
-    if(!localStorage.getItem(fpKey)){
-        toast("⚠️ No fingerprint registered for this ID yet!");
-        return;
-    }
-
-    if (window.PublicKeyCredential && window.isSecureContext) {
-        try {
-            toast("👆 Verify registered fingerprint...");
-            const challenge = new Uint8Array(32);
-            window.crypto.getRandomValues(challenge);
-
-            const assertion = await navigator.credentials.get({
-                publicKey: {
-                    challenge: challenge,
-                    timeout: 60000,
-                    userVerification: "required"
-                }
-            });
-
-            if(assertion){
-                sessionStorage.setItem("nk_logged_in", "true");
-                document.getElementById("loginScreen").style.display = "none";
-                document.getElementById("app").style.display = "block";
-                startApp();
-                toast("✓ Fingerprint Verified! Welcome.");
-                return;
-            }
-        } catch (e) {}
-    }
-
-    toast("👆 Fingerprint Verified!");
-    setTimeout(() => {
-        sessionStorage.setItem("nk_logged_in", "true");
-        document.getElementById("loginScreen").style.display = "none";
-        document.getElementById("app").style.display = "block";
-        startApp();
-    }, 600);
 }
 
 function logout(){
@@ -804,7 +614,6 @@ function logout(){
     document.getElementById("app").style.display = "none";
     document.getElementById("loginScreen").style.display = "flex";
     document.getElementById("loginPass").value = "";
-    checkFingerprintRegistered();
 }
 
 function openPassword(){ document.getElementById("passwordModal").style.display = "flex"; }
@@ -814,14 +623,14 @@ function changePassword(){
     const oldPassword = document.getElementById("oldPass").value.trim();
     const newPassword = document.getElementById("newPass").value.trim();
 
-    if(oldPassword !== getPassword()){ toast("❌ Current password is wrong"); return; }
-    if(newPassword.length < 4){ toast("⚠️ Password must be at least 4 characters"); return; }
+    if(oldPassword !== getPassword()){ toast("Current password is incorrect"); return; }
+    if(newPassword.length < 4){ toast("Password must be at least 4 characters"); return; }
 
     localStorage.setItem("nk_password", newPassword);
     document.getElementById("oldPass").value = "";
     document.getElementById("newPass").value = "";
     closePassword();
-    toast("✓ Password updated successfully");
+    toast("Password updated successfully");
 }
 
 function today(){ return new Date().toISOString().slice(0,10); }
@@ -850,9 +659,7 @@ function addItem(name = "Dry Fruits Kulfi", qty = 1, rate = 750){
         qty: Number(qty) || 1,
         rate: Number(rate) || 750
     });
-    renderItems();
-    calculate();
-    saveDraft();
+    renderItems(); calculate(); saveDraft();
 }
 
 function renderItems(){
@@ -867,12 +674,10 @@ function renderItems(){
         row.className = "item-row";
         row.innerHTML = `
             <div class="item-number">${index + 1}</div>
-            <select onchange="updateItem(${item.id}, 'name', this.value)">
-                ${optionsHTML}
-            </select>
+            <select onchange="updateItem(${item.id}, 'name', this.value)">${optionsHTML}</select>
             <input type="number" min="1" value="${item.qty}" oninput="updateItem(${item.id}, 'qty', this.value)">
             <input type="number" min="0" step="0.01" value="${item.rate}" oninput="updateItem(${item.id}, 'rate', this.value)">
-            <button class="remove-btn" onclick="removeItem(${item.id})">❌</button>
+            <button class="remove-btn" onclick="removeItem(${item.id})">✕</button>
         `;
         container.appendChild(row);
     });
@@ -881,43 +686,26 @@ function renderItems(){
 function updateItem(id, field, value){
     const item = items.find(x => x.id === id);
     if(!item) return;
-    if(field === "name"){
-        item.name = value;
-    } else {
-        item[field] = Number(value) || 0;
-    }
-    calculate();
-    saveDraft();
+    if(field === "name"){ item.name = value; } else { item[field] = Number(value) || 0; }
+    calculate(); saveDraft();
 }
 
 function removeItem(id){
     items = items.filter(x => x.id !== id);
-    if(items.length === 0){
-        items.push({ id: Date.now(), name: KULFI_PRESETS[0], qty: 1, rate: 750 });
-    }
-    renderItems();
-    calculate();
-    saveDraft();
+    if(items.length === 0){ items.push({ id: Date.now(), name: KULFI_PRESETS[0], qty: 1, rate: 750 }); }
+    renderItems(); calculate(); saveDraft();
 }
 
 function calculate(){
     let subtotal = 0;
-    items.forEach(function(item){
-        subtotal += item.qty * item.rate;
-    });
-
+    items.forEach(function(item){ subtotal += item.qty * item.rate; });
     let discount = Number(document.getElementById("discount").value) || 0;
-    if(discount > subtotal){
-        discount = subtotal;
-        document.getElementById("discount").value = discount;
-    }
-
+    if(discount > subtotal){ discount = subtotal; document.getElementById("discount").value = discount; }
     const total = subtotal - discount;
 
     document.getElementById("subtotal").textContent = "₹" + money(subtotal);
     document.getElementById("discountShow").textContent = "₹" + money(discount);
     document.getElementById("total").textContent = "₹" + money(total);
-
     return { subtotal: subtotal, discount: discount, total: total };
 }
 
@@ -962,8 +750,7 @@ function saveInvoice(){
     if(index >= 0){ invoices[index] = invoice; } else { invoices.unshift(invoice); }
 
     localStorage.setItem("nk_cloud_invoices_" + getLoginId(), JSON.stringify(invoices));
-    renderSaved();
-    toast("✓ Invoice Saved to Cloud Database");
+    renderSaved(); toast("Invoice saved successfully");
 }
 
 function renderSaved(){
@@ -1005,15 +792,14 @@ function loadInvoice(id){
     items = JSON.parse(JSON.stringify(invoice.items));
     renderItems(); calculate(); saveDraft();
     window.scrollTo({ top:0, behavior:"smooth" });
-    toast("✓ Invoice Loaded Successfully");
+    toast("Invoice loaded successfully");
 }
 
 function deleteInvoice(id){
-    if(!confirm("Delete this invoice?")) return;
+    if(!confirm("Are you sure you want to delete this invoice?")) return;
     const invoices = getInvoices().filter(x => x.id !== id);
     localStorage.setItem("nk_cloud_invoices_" + getLoginId(), JSON.stringify(invoices));
-    renderSaved();
-    toast("Invoice deleted");
+    renderSaved(); toast("Invoice deleted");
 }
 
 function saveDraft(){
@@ -1060,25 +846,25 @@ function newInvoice(){
     document.getElementById("discount").value = 0;
     items = [{ id: Date.now(), name: KULFI_PRESETS[0], qty: 1, rate: 750 }];
     renderItems(); calculate(); localStorage.removeItem("nk_draft");
-    toast("✨ New Invoice Ready");
+    toast("New invoice initialized");
 }
 
 function clearForm(){
-    if(!confirm("Clear current invoice?")) return;
+    if(!confirm("Clear current invoice form?")) return;
     document.getElementById("customerName").value = "";
     document.getElementById("customerAddress").value = "";
     document.getElementById("customerPhone").value = "";
     document.getElementById("discount").value = 0;
     items = [{ id: Date.now(), name: KULFI_PRESETS[0], qty: 1, rate: 750 }];
     renderItems(); calculate(); saveDraft();
-    toast("Invoice cleared");
+    toast("Form cleared");
 }
 
 function sendWhatsApp(){
     const name = document.getElementById("customerName").value.trim();
     let phone = document.getElementById("customerPhone").value.trim();
-    if(!name){ toast("⚠️ Enter customer name"); return; }
-    if(!phone){ toast("⚠️ Enter WhatsApp number"); return; }
+    if(!name){ toast("Please enter customer name"); return; }
+    if(!phone){ toast("Please enter WhatsApp number"); return; }
 
     phone = phone.replace(/[^0-9]/g, "");
     if(phone.length === 10) phone = "91" + phone;
@@ -1126,94 +912,43 @@ Discount: ₹${money(bill.discount)}
 function generateInvoiceCanvas(callback){
     const bill = calculate();
     const canvas = document.createElement("canvas");
-    canvas.width = 1654;
-    canvas.height = 2339;
+    canvas.width = 1654; canvas.height = 2339;
     const ctx = canvas.getContext("2d");
 
-    ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#ffffff"; ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = "#43135f"; ctx.lineWidth = 6; ctx.strokeRect(30, 30, canvas.width - 60, canvas.height - 60);
+    ctx.lineWidth = 2; ctx.strokeRect(50, 50, canvas.width - 100, canvas.height - 100);
 
-    ctx.strokeStyle = "#43135f";
-    ctx.lineWidth = 6;
-    ctx.strokeRect(30, 30, canvas.width - 60, canvas.height - 60);
+    ctx.beginPath(); ctx.arc(175, 175, 95, 0, Math.PI * 2); ctx.fillStyle = "#fff9e9"; ctx.fill();
+    ctx.strokeStyle = "#43135f"; ctx.lineWidth = 5; ctx.stroke();
 
-    ctx.lineWidth = 2;
-    ctx.strokeRect(50, 50, canvas.width - 100, canvas.height - 100);
+    ctx.textAlign = "center"; ctx.fillStyle = "#43135f"; ctx.font = "bold 44px Arial"; ctx.fillText("NK", 175, 188);
+    ctx.fillStyle = "#e83f6f"; ctx.font = "italic bold 22px Georgia"; ctx.fillText("KULFI", 175, 222);
 
-    ctx.beginPath();
-    ctx.arc(175, 175, 95, 0, Math.PI * 2);
-    ctx.fillStyle = "#fff9e9";
-    ctx.fill();
-    ctx.strokeStyle = "#43135f";
-    ctx.lineWidth = 5;
-    ctx.stroke();
+    ctx.textAlign = "left"; ctx.fillStyle = "#43135f"; ctx.font = "bold 65px Georgia"; ctx.fillText("NASHIK KULFI", 320, 135);
+    ctx.fillStyle = "#654b70"; ctx.font = "italic 24px Georgia"; ctx.fillText("Premium Taste • Pure Ingredients", 325, 175);
+    ctx.fillStyle = "#29242c"; ctx.font = "22px Arial"; ctx.fillText("Karanja Lad, Pin Code: 444105 | Mo. No.: 8308631761", 325, 215);
 
-    ctx.textAlign = "center";
-    ctx.fillStyle = "#43135f";
-    ctx.font = "bold 44px Arial";
-    ctx.fillText("NK", 175, 188);
-
-    ctx.fillStyle = "#e83f6f";
-    ctx.font = "italic bold 22px Georgia";
-    ctx.fillText("KULFI", 175, 222);
-
-    ctx.textAlign = "left";
-    ctx.fillStyle = "#43135f";
-    ctx.font = "bold 65px Georgia";
-    ctx.fillText("NASHIK KULFI", 320, 135);
-
-    ctx.fillStyle = "#654b70";
-    ctx.font = "italic 24px Georgia";
-    ctx.fillText("Premium Taste • Pure Ingredients", 325, 175);
-
-    ctx.fillStyle = "#29242c";
-    ctx.font = "22px Arial";
-    ctx.fillText("Karanja Lad, Pin Code: 444105 | Mo. No.: 8308631761", 325, 215);
-
-    ctx.textAlign = "right";
-    ctx.font = "bold 24px Arial";
+    ctx.textAlign = "right"; ctx.font = "bold 24px Arial";
     ctx.fillText("Invoice No : #" + document.getElementById("invoiceNo").value, 1550, 135);
     ctx.fillText("Date : " + formatDate(document.getElementById("invoiceDate").value), 1550, 175);
     ctx.fillText("Status : " + document.getElementById("status").value, 1550, 215);
 
-    ctx.strokeStyle = "#43135f";
-    ctx.lineWidth = 4;
-    ctx.beginPath(); ctx.moveTo(80, 275); ctx.lineTo(1574, 275); ctx.stroke();
+    ctx.strokeStyle = "#43135f"; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(80, 275); ctx.lineTo(1574, 275); ctx.stroke();
 
-    ctx.textAlign = "left";
-    ctx.fillStyle = "#43135f";
-    ctx.font = "bold 26px Arial";
-    ctx.fillText("Bill To,", 90, 330);
+    ctx.textAlign = "left"; ctx.fillStyle = "#43135f"; ctx.font = "bold 26px Arial"; ctx.fillText("Bill To,", 90, 330);
+    ctx.fillStyle = "#29242c"; ctx.font = "bold 24px Arial"; ctx.fillText(document.getElementById("customerName").value || "Walk-in Customer", 90, 370);
+    ctx.font = "20px Arial"; ctx.fillText(document.getElementById("customerAddress").value || "Address not provided", 90, 405);
+    if(document.getElementById("customerPhone").value){ ctx.fillText("Phone: " + document.getElementById("customerPhone").value, 90, 440); }
 
-    ctx.fillStyle = "#29242c";
-    ctx.font = "bold 24px Arial";
-    ctx.fillText(document.getElementById("customerName").value || "Walk-in Customer", 90, 370);
+    ctx.fillStyle = "#43135f"; ctx.fillRect(630, 460, 394, 65);
+    ctx.textAlign = "center"; ctx.fillStyle = "#ffffff"; ctx.font = "bold 30px Georgia"; ctx.fillText("CASH / CREDIT MEMO", 827, 502);
 
-    ctx.font = "20px Arial";
-    ctx.fillText(document.getElementById("customerAddress").value || "Address not provided", 90, 405);
-    if(document.getElementById("customerPhone").value){
-        ctx.fillText("Phone: " + document.getElementById("customerPhone").value, 90, 440);
-    }
+    const tableX = 80; const tableY = 560; const rowHeight = 60;
+    ctx.fillStyle = "#43135f"; ctx.fillRect(tableX, tableY, 1494, rowHeight);
+    ctx.fillStyle = "#ffffff"; ctx.font = "bold 20px Arial";
 
-    ctx.fillStyle = "#43135f";
-    ctx.fillRect(630, 460, 394, 65);
-    ctx.textAlign = "center";
-    ctx.fillStyle = "#ffffff";
-    ctx.font = "bold 30px Georgia";
-    ctx.fillText("CASH / CREDIT MEMO", 827, 502);
-
-    const tableX = 80;
-    const tableY = 560;
-    const rowHeight = 60;
-
-    ctx.fillStyle = "#43135f";
-    ctx.fillRect(tableX, tableY, 1494, rowHeight);
-
-    ctx.fillStyle = "#ffffff";
-    ctx.font = "bold 20px Arial";
-
-    ctx.textAlign = "center";
-    ctx.fillText("Sr. No.", 130, tableY + 38);
+    ctx.textAlign = "center"; ctx.fillText("Sr. No.", 130, tableY + 38);
     ctx.fillText("Item & Flavor Name", 450, tableY + 38);
     ctx.fillText("Quantity (Box)", 860, tableY + 38);
     ctx.fillText("Rate (₹)", 1140, tableY + 38);
@@ -1225,101 +960,49 @@ function generateInvoiceCanvas(callback){
     for(let i = 0; i < numberOfRows; i++){
         ctx.fillStyle = i % 2 ? "#fcfafc" : "#ffffff";
         ctx.fillRect(tableX, y, 1494, rowHeight);
-
-        ctx.strokeStyle = "#d9d3dc";
-        ctx.lineWidth = 1;
-        ctx.strokeRect(tableX, y, 1494, rowHeight);
+        ctx.strokeStyle = "#d9d3dc"; ctx.lineWidth = 1; ctx.strokeRect(tableX, y, 1494, rowHeight);
 
         if(i < items.length){
             const item = items[i];
             const amount = item.qty * item.rate;
-
-            ctx.fillStyle = "#29242c";
-            ctx.font = "20px Arial";
-
-            ctx.textAlign = "center";
-            ctx.fillText(String(i + 1), 130, y + 38);
-
-            ctx.textAlign = "left";
-            ctx.fillText(item.name || "—", 220, y + 38);
-
-            ctx.textAlign = "center";
-            ctx.fillText(String(item.qty), 860, y + 38);
-
-            ctx.textAlign = "right";
-            ctx.fillText(money(item.rate), 1250, y + 38);
+            ctx.fillStyle = "#29242c"; ctx.font = "20px Arial";
+            ctx.textAlign = "center"; ctx.fillText(String(i + 1), 130, y + 38);
+            ctx.textAlign = "left"; ctx.fillText(item.name || "—", 220, y + 38);
+            ctx.textAlign = "center"; ctx.fillText(String(item.qty), 860, y + 38);
+            ctx.textAlign = "right"; ctx.fillText(money(item.rate), 1250, y + 38);
             ctx.fillText(money(amount), 1540, y + 38);
         }
         y += rowHeight;
     }
 
     const summaryY = y + 25;
-    ctx.strokeStyle = "#43135f";
-    ctx.lineWidth = 3;
-    ctx.strokeRect(1050, summaryY, 524, 180);
+    ctx.strokeStyle = "#43135f"; ctx.lineWidth = 3; ctx.strokeRect(1050, summaryY, 524, 180);
 
-    ctx.textAlign = "left";
-    ctx.fillStyle = "#29242c";
-    ctx.font = "20px Arial";
-    ctx.fillText("Subtotal", 1080, summaryY + 42);
-    ctx.textAlign = "right";
-    ctx.fillText("₹" + money(bill.subtotal), 1540, summaryY + 42);
+    ctx.textAlign = "left"; ctx.fillStyle = "#29242c"; ctx.font = "20px Arial";
+    ctx.fillText("Subtotal", 1080, summaryY + 42); ctx.textAlign = "right"; ctx.fillText("₹" + money(bill.subtotal), 1540, summaryY + 42);
+    ctx.textAlign = "left"; ctx.fillText("Discount", 1080, summaryY + 85); ctx.textAlign = "right"; ctx.fillText("₹" + money(bill.discount), 1540, summaryY + 85);
 
-    ctx.textAlign = "left";
-    ctx.fillText("Discount", 1080, summaryY + 85);
-    ctx.textAlign = "right";
-    ctx.fillText("₹" + money(bill.discount), 1540, summaryY + 85);
+    ctx.strokeStyle = "#43135f"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(1070, summaryY + 105); ctx.lineTo(1555, summaryY + 105); ctx.stroke();
+    ctx.textAlign = "left"; ctx.fillStyle = "#43135f"; ctx.font = "bold 26px Arial";
+    ctx.fillText("TOTAL", 1080, summaryY + 148); ctx.textAlign = "right"; ctx.fillText("₹" + money(bill.total), 1540, summaryY + 148);
 
-    ctx.strokeStyle = "#43135f";
-    ctx.lineWidth = 2;
-    ctx.beginPath(); ctx.moveTo(1070, summaryY + 105); ctx.lineTo(1555, summaryY + 105); ctx.stroke();
-
-    ctx.textAlign = "left";
-    ctx.fillStyle = "#43135f";
-    ctx.font = "bold 26px Arial";
-    ctx.fillText("TOTAL", 1080, summaryY + 148);
-    ctx.textAlign = "right";
-    ctx.fillText("₹" + money(bill.total), 1540, summaryY + 148);
-
-    ctx.textAlign = "left";
-    ctx.font = "bold 20px Arial";
-    ctx.fillText("Amount in Words:", 90, summaryY + 42);
-    ctx.fillStyle = "#29242c";
-    ctx.font = "18px Arial";
-    ctx.fillText(amountInWords(bill.total), 90, summaryY + 75);
+    ctx.textAlign = "left"; ctx.font = "bold 20px Arial"; ctx.fillText("Amount in Words:", 90, summaryY + 42);
+    ctx.fillStyle = "#29242c"; ctx.font = "18px Arial"; ctx.fillText(amountInWords(bill.total), 90, summaryY + 75);
 
     const footerY = 2020;
-    ctx.strokeStyle = "#43135f";
-    ctx.lineWidth = 2;
-    ctx.beginPath(); ctx.moveTo(80, footerY); ctx.lineTo(1574, footerY); ctx.stroke();
+    ctx.strokeStyle = "#43135f"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(80, footerY); ctx.lineTo(1574, footerY); ctx.stroke();
 
-    ctx.textAlign = "left";
-    ctx.fillStyle = "#43135f";
-    ctx.font = "italic 20px Georgia";
-    ctx.fillText("Thank you for your business!", 90, footerY + 38);
-
-    ctx.font = "bold 18px Arial";
-    ctx.fillText("Terms & Conditions:", 90, footerY + 72);
-    ctx.fillStyle = "#555";
-    ctx.font = "16px Arial";
+    ctx.textAlign = "left"; ctx.fillStyle = "#43135f"; ctx.font = "italic 20px Georgia"; ctx.fillText("Thank you for your business!", 90, footerY + 38);
+    ctx.font = "bold 18px Arial"; ctx.fillText("Terms & Conditions:", 90, footerY + 72);
+    ctx.fillStyle = "#555"; ctx.font = "16px Arial";
     ctx.fillText("1. Goods once sold will not be taken back.", 90, footerY + 100);
     ctx.fillText("2. Payment to be settled on delivery.", 90, footerY + 126);
 
-    ctx.textAlign = "right";
-    ctx.fillStyle = "#43135f";
-    ctx.font = "bold 20px Georgia";
-    ctx.fillText("For NASHIK KULFI", 1540, footerY + 38);
+    ctx.textAlign = "right"; ctx.fillStyle = "#43135f"; ctx.font = "bold 20px Georgia"; ctx.fillText("For NASHIK KULFI", 1540, footerY + 38);
+    ctx.strokeStyle = "#777"; ctx.beginPath(); ctx.moveTo(1370, footerY + 95); ctx.lineTo(1540, footerY + 95); ctx.stroke();
+    ctx.fillStyle = "#555"; ctx.font = "15px Arial"; ctx.fillText("Authorised Signatory", 1540, footerY + 124);
 
-    ctx.strokeStyle = "#777";
-    ctx.beginPath(); ctx.moveTo(1370, footerY + 95); ctx.lineTo(1540, footerY + 95); ctx.stroke();
-
-    ctx.fillStyle = "#555";
-    ctx.font = "15px Arial";
-    ctx.fillText("Authorised Signatory", 1540, footerY + 124);
-
-    ctx.textAlign = "center";
-    ctx.fillStyle = "#43135f";
-    ctx.font = "italic 20px Georgia";
+    ctx.textAlign = "center"; ctx.fillStyle = "#43135f"; ctx.font = "italic 20px Georgia";
     ctx.fillText("✦ Pure Taste, Pure Happiness ✦", 827, 2250);
 
     callback(canvas);
@@ -1331,7 +1014,7 @@ function downloadInvoiceImage(){
         link.download = "Nashik-Kulfi-Invoice-" + document.getElementById("invoiceNo").value + ".png";
         link.href = canvas.toDataURL("image/png");
         link.click();
-        toast("✓ Invoice Image Downloaded Successfully");
+        toast("Invoice image downloaded successfully");
     });
 }
 
@@ -1348,14 +1031,13 @@ function printInvoiceDocument(){
             </html>
         `);
         printWindow.document.close();
-        toast("🖨️ Opening Print Window...");
+        toast("Opening print window...");
     });
 }
 
 function toast(message){
     const element = document.getElementById("toast");
-    element.textContent = message;
-    element.classList.add("show");
+    element.textContent = message; element.classList.add("show");
     setTimeout(function(){ element.classList.remove("show"); }, 2400);
 }
 
@@ -1364,8 +1046,7 @@ function startApp(){
     document.getElementById("invoiceDate").value = today();
     if(!loadDraft()){
         items = [{ id: Date.now(), name: KULFI_PRESETS[0], qty: 1, rate: 750 }];
-        renderItems();
-        calculate();
+        renderItems(); calculate();
     }
     renderSaved();
 }
